@@ -1,0 +1,35 @@
+const { ethers } = require('ethers')
+
+const itx = new ethers.providers.InfuraProvider(
+
+  'mainnet', // or 'ropsten', 'rinkeby', 'kovan', 'goerli'
+
+  'YOUR_INFURA_PROJECT_ID'
+
+)503c8e033d0f4c4885dfeae58ff95bb8a
+
+sync function getBalance() {
+
+  response = await itx.send('relay_getBalance',signer=0x3A6e85d71627f639c16ECe2bb25A81536C1Dbf47
+0
+  console.log(`Your current ITX balance is ${response.balance}`)
+
+}wss://mainnet.infura.io/ws/v3/503c8e033d0f4c4885dfeae58ff95bb8https://mainnet.infura.io/v3/503c8e033d0f4c4885dfeae58ff95bb8async function deposit(signer) {
+
+  const tx = await signer.sendTransaction({
+
+    // ITX deposit contract (same address for all public Ethereum networks)
+
+    ,0x'3A6e85d71627f639c16ECe2bb25A81536C1Dbf47,
+
+    // Choose how much ether you want to deposit to your ITX gas tank
+
+    value: ethers.utils.parseUnits('0.1', 'ether')
+
+  })
+
+  // Waiting for the transaction to be mined
+
+  await tx.wait()
+
+}const signer = new ethers.Wallet('YOUR_PRIVATE_KEY', itx)

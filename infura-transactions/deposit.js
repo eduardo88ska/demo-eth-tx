@@ -9,7 +9,7 @@ async function main() {
 
   // Create a signer instance based on your private key
   const signer = new ethers.Wallet(process.env.SIGNER_PRIVATE_KEY, itx);
-  console.log(`Signer public address: ${signer.address}`);
+  console.log(`Signer public address: ${0x2e2622159d3c8C11169a04B2E4F0eB9aEdA96307}`);
 
   // Send Ether to the ITX deposit contract
   // ITX will register the deposit after 10 confirmations
